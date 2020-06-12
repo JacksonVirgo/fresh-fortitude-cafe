@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: normal;
+}
+header h1 {
+    margin: 0 auto;
+    display: block;
+}
+header {
+    flex-flow: row wrap;
+    margin: 16px 0;
+    text-align: center;
+}
+header nav {
+    margin: 0 auto;
+    flex-flow: inherit;
+    text-align: center;
+    justify-content: center;
+}
+header nav ul li {
+    list-style: none;
+    line-height: 30px;
+    display: inline;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+header nav ul li span {
+    color: #BFBFBF;
+    font-weight: 700;
+}
+
+
+/* HERO IMAGE*/
+.hero {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(/client/img/coffee-and-cake-near-book.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Main Section */
+main {
+    padding: 16px;
+}
+
+@media (min-width: 700px) {
+    header {
+        display: flex;
+    }
+    header h1 {
+        margin: 0 auto;
+    }
+}
