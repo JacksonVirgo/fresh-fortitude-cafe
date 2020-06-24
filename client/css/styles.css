@@ -6,8 +6,17 @@
     font-family: 'Balsamiq Sans', cursive;
     font-weight: normal;
 }
+html {
+    width: 100%;
+    margin: 0;
+}
 .content {
     font-size: 18px;
+}
+header, main, footer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
 }
 header h1 {
     margin: 0 auto;
@@ -49,7 +58,8 @@ hr {
 
 /* HERO IMAGE*/
 .hero {
-    width: 100vw;
+    width: 100%;
+    margin: 0 auto;
     height: 75vh;
     display: flex;
     justify-content: center;
@@ -64,7 +74,7 @@ hr {
 }
 .hero-inner .catch {
     color: white;
-    font-size: 45px;
+    font-size: 40px;
     margin-bottom: 25px;
 }
 .hero-inner .btn {
@@ -137,11 +147,21 @@ h2 {
 }
 
 /* Opening Times */
-table tr td {
-    
+#open table td {
+    padding: 5px;
 }
 #open .wrapper {
-    height: 600px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+#open table {
+    margin: 0 auto;
+}
+#open h2 {
+    text-align: center;
 }
 #open {
     width: 100%;
@@ -153,7 +173,7 @@ table tr td {
 }
 #open img {
     padding: 0px !important;
-    background-position: 50% 50% !important;
+    background-position: 50% 50%;
     display: none;
 
     width: 100%;
@@ -163,15 +183,20 @@ table tr td {
     background-repeat: no-repeat !important;
     background-image: url('/client/img/close-up-of-coffee-cup-on-table.jpg');
     background-size: cover !important; 
+    background-position: right;
 }
 #open .right {
     background-repeat: no-repeat !important;
     background-image: url('/client/img/close-up-of-served-food-on-table.jpg');
     background-size: cover !important; 
+    background-position: left;
 }
 @media (min-width: 700px) {
     #open {
-        grid-template-columns: 20% auto 20%;
+        grid-template-columns: 30% auto 30%;
+    }
+    #open .wrapper {
+        height: 600px;
     }
     #open .left, #open .right {
         display: inline-block;
@@ -184,4 +209,25 @@ table tr td {
     #open .right { 
         order: 1;
     }
+}
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 300px;
+
+    background-color: #212226;
+    color: white;
+    text-align: center;
+
+    padding-top: 32px;
+}
+
+footer * {
+    padding-top: 16px;
+}
+
+.white {
+    color: white !important;
 }
